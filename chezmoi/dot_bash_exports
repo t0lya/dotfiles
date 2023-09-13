@@ -3,3 +3,4 @@
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:/mnt/c/Users/tle/AppData/Local/Programs/Microsoft VS Code/bin"

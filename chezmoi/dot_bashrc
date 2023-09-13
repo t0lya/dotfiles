@@ -68,7 +68,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{exports,aliases,functions}; do
+for file in ~/.bash_{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
