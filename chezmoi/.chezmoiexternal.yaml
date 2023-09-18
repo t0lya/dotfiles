@@ -2,3 +2,8 @@
     type: "file"
     url: "https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias"
     refreshPeriod: "168h"
+
+.kube-ps1.sh:
+    type: "file"
+    url: "https://raw.githubusercontent.com/jonmosco/kube-ps1/master/kube-ps1.sh"
+    refreshPeriod: "168h"
