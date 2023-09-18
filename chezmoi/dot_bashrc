@@ -68,7 +68,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{exports,aliases,functions,extra}; do
+for file in ~/.{exports,aliases,functions,completions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -76,3 +76,5 @@ unset file;
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+source ~/.complete_alias
