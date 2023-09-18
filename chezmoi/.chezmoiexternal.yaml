@@ -1,3 +1,11 @@
+.bash-git-prompt:
+    type: "git-repo"
+    url: "https://github.com/magicmonty/bash-git-prompt.git"
+    refreshPeriod: "168h"
+    \".bash-git-prompt\".clone:
+        args:
+        - --depth=1
+
 .complete_alias:
     type: "file"
     url: "https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias"

@@ -44,8 +44,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
 fi
 
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1;
+    source $HOME/.bash-git-prompt/gitprompt.sh;
+fi
 
-if [ -f ~/kube-ps1.sh ]; then
-	source ~/kube-ps1.sh;
+if [ -f "$HOME/kube-ps1.sh" ]; then
+	source $HOME/kube-ps1.sh;
     PS1='[\u@\h \W $(kube_ps1)]\$ '
 fi
