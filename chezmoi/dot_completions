@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if command -v kubectl 1>/dev/null 2>&1; then
-  eval "$(kubectl init -)"
+  source <(kubectl completion bash)
 fi
 
 if command -v kind 1>/dev/null 2>&1; then
-  eval "$(kind init -)"
+  source <(kind completion bash)
 fi
