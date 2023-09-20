@@ -9,8 +9,6 @@ if command -v kind 1>/dev/null 2>&1; then
 fi
 
 if command -v kubectx 1>/dev/null 2>&1; then
-  git clone https://github.com/ahmetb/kubectx.git ~/.kubectx
-  COMPDIR=$(pkg-config --variable=completionsdir bash-completion)
-  ln -sf ~/.kubectx/completion/kubens.bash $COMPDIR/kubens
-  ln -sf ~/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
+  source ~/.kubectx/completion/kubens.bash $COMPDIR/kubens
+  source ~/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
 fi
