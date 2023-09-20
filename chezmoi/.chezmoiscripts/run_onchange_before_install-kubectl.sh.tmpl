@@ -23,6 +23,10 @@ sudo apt install -y kubectl
   ./"${KREW}" install krew
 )
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+kubectl krew install ctx
+kubectl krew install ns
+
 git -C ~/.kubectx pull || git clone https://github.com/ahmetb/kubectx.git ~/.kubectx
 
 {{ end -}}
