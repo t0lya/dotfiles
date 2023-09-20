@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
 export PATH="$PATH:/mnt/c/Users/tle/AppData/Local/Programs/Microsoft VS Code/bin"
+export PATH=~/.kubectx:\$PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+

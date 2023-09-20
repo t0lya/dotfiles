@@ -1,6 +1,9 @@
 {{- $name := promptStringOnce . "name" "Name" "Tony Le" -}}
 {{- $email := promptStringOnce . "email" "Email address" "tony.le@usa.com" -}}
 
+{{- $kubectl := promptBoolOnce . "kubectl" "Install kubectl?" false -}}{{/* true if this machine should have kubectl installed */}}
+
 data:
   name: {{ $name | quote }}
   email: {{ $email | quote }}
+  kubectl: {{ $kubectl }}
