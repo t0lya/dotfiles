@@ -1,0 +1,19 @@
+{{ if .golang -}}
+
+#!/bin/bash
+set -eufo pipefail
+
+# https://github.com/moovweb/gvm
+
+sudo apt update
+sudo apt install bison
+
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+source "$HOME/.gvm/scripts/gvm"
+
+VERSION=$(curl -s "https://go.dev/VERSION?m=text" | head -n 1)
+gvm install $VERSION
+gvm use $VERSION --default
+
+{{ end -}}

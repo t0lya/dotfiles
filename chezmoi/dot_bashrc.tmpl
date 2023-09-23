@@ -37,3 +37,7 @@ if [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi
 source ~/.complete_alias
+
+{{ if .golang -}}
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+{{ end -}}
