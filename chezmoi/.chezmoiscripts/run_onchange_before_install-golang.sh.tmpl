@@ -10,10 +10,10 @@ sudo apt install bison
 
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
-source "$HOME/.gvm/scripts/gvm"
+source ~/.bashrc
 
 VERSION=$(curl -s "https://go.dev/VERSION?m=text" | head -n 1)
+echo "Installing Go version $VERSION"
 gvm install $VERSION
-gvm use $VERSION --default
 
 {{ end -}}
