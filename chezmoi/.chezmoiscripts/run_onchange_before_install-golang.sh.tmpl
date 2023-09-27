@@ -3,17 +3,12 @@
 #!/bin/bash
 set -eufo pipefail
 
-# https://github.com/moovweb/gvm
+git -C ~/.goenv pull || git clone https://github.com/go-nv/goenv.git ~/.goenv
 
-sudo apt update
-sudo apt install bison
+GOENV_ROOT="$HOME/.goenv"
+PATH="$GOENV_ROOT/bin:$PATH"
 
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-
-source ~/.bashrc
-
-VERSION=$(curl -s "https://go.dev/VERSION?m=text" | head -n 1)
-echo "Installing Go version $VERSION"
-gvm install $VERSION
+goenv install latest
+goenv global $(goenv versions --bare)
 
 {{ end -}}

@@ -39,5 +39,9 @@ fi
 source ~/.complete_alias
 
 {{ if .golang -}}
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+eval "$(goenv init -)"
+
+# Required to run after `goenv init` to make sure $GOROOT and $GOPATH is managed properly
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 {{ end -}}
