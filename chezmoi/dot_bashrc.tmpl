@@ -45,3 +45,6 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 {{ end -}}
+
+# Don't accidentally log out on ctrl+d (aka EOF)
+set -o ignoreeof
